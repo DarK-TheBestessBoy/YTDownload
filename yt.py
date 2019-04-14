@@ -1,4 +1,3 @@
-#WORKS WITH 2.X
 import os
 import sys
 from pytube import YouTube
@@ -42,8 +41,8 @@ def verbose(progress):
         os.system('clear')
         os.system('cowsay "' + msg + '"')
     else:
-        print msg
-        
+        print(msg)
+
 def prep_link(raw):
     global prepared
     linkid = re.search('[0-9A-Za-z_-]{11}', raw.strip()).group(0)
@@ -54,7 +53,6 @@ def down_link(prepped):
     YouTube(prepped).streams.first().download('./mp4/')
 
 checkargs()
-
 if islist:     
     load_links()
     for x in linkek:
@@ -63,5 +61,4 @@ if islist:
         linkdon += 1
 if cow:
     os.system('clear')
-
 
