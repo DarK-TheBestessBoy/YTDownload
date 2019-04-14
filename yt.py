@@ -16,7 +16,6 @@ def checkargs():
     global islist
     global linkdon
     for arg in sys.argv:
-        print arg
         if re.match('^cow$', arg):
             cow=True
     for arg in sys.argv:
